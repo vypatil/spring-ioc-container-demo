@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="Emp1" name="Emp1" class="com.demo.springEntity.Employee">
+		<constructor-arg name="empId" value="10" />
+		<constructor-arg name="name" value="Vaibhav" />
+		<constructor-arg name="address">
+			<ref bean="adr1" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="adr1" class="com.demo.springEntity.Address">
+		<constructor-arg name="pinCode" value="456" />
+		<constructor-arg name="city" value="Kolhapur" />
+	</bean>
+
+
+	<bean id="Emp2" name="Emp2" class="com.demo.springEntity.Employee">
+		<constructor-arg type="int" value="20" />
+		<constructor-arg type="String" value="Sush" />
+		<constructor-arg name="address">
+			<ref bean="adr2" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="adr2" class="com.demo.springEntity.Address">
+		<constructor-arg type="int" value="3333" />
+		<constructor-arg type="String" value="Pune" />
+	</bean>
+
+	<bean id="Emp3" name="Emp3" class="com.demo.springEntity.Employee">
+		<constructor-arg index="0" value="30" />
+		<constructor-arg index="1" value="pratik" />
+		<constructor-arg index="2" name="address">
+			<ref bean="adr3" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="adr3" class="com.demo.springEntity.Address">
+		<constructor-arg index="0" value="444" />
+		<constructor-arg index="1" value="mumbai" />
+	</bean>
+
+</beans>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.demo.beanscope.Car" name="carobj" scope="singleton">
+		<property name="model" value="2010" />
+		<property name="company" value="Hyundai" />
+		<property name="type" value="HatchBack" />
+	</bean>
+
+	<bean class="com.demo.beanscope.Car" name="carobj2"	scope="prototype">
+		<property name="model" value="2010" />
+		<property name="company" value="Hyundai" />
+		<property name="type" value="HatchBack" />
+	</bean>
+
+
+
+</beans>

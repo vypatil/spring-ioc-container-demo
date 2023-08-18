@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean class="com.demo.Autowiring.Address" name="address1">
+		<property name="vilage" value="Kalambe" />
+		<property name="State" value="Maharashtra" />
+	</bean>
+
+	<bean class="com.demo.Autowiring.Address" name="address">
+		<property name="vilage" value="Kagal" />
+		<property name="State" value="Karnataka" />
+	</bean>
+
+	<bean class="com.demo.Autowiring.Employee" name="Emp" autowire="byName" />  
+
+<!-- 	  <bean class="com.demo.Autowiring.Employee" name="Emp" autowire="byType"/> 
+ -->	 
+	 <!-- <bean class="com.demo.Autowiring.Employee" name="Emp" autowire="constructor"/>  -->
+	
+	
+</beans>

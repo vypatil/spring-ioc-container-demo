@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="Emp" class="com.demo.collectioninjection.Emp">
+		<property name="name" value="Ram" />
+		<property name="phones">
+			<list>
+				<value>00000</value>
+				<value>111111</value>
+				<value>22222</value>
+				<value>333333</value>
+			</list>
+		</property>
+		<property name="addresses">
+			<set>
+				<value>kolhapur</value>
+				<value>pune</value>
+				<value>mumbai</value>
+				<value>delhi</value>
+			</set>
+		</property>
+		<property name="courses">
+			<map>
+				<entry key="java" value="2 months" />
+				<entry key="Python" value="3 months" />
+			</map>
+		</property>
+		
+	</bean>
+	
+	
+
+</beans>

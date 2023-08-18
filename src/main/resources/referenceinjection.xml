@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean name="Bref" class="com.demo.refernceinjection.B">
+		<property name="name" value="java" />
+	</bean>
+
+	<bean name="Aref" class="com.demo.refernceinjection.A" >
+	<property name="rollno" value="55"/>
+	<property name="b" ref="Bref"/>
+
+</bean>
+
+</beans>

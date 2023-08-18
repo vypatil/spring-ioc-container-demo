@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="person1" class="com.demo.collectioninjection.Person">
+		<property name="id" value="1" />
+		<property name="name" value="vaibhav" />
+		<property name="mobileNumbers">
+			<list>
+				<value>721841</value>
+				<value>901157</value>
+				<value>742085</value>
+				<value>742085</value>
+			</list>
+		</property>
+		<property name="emailId">
+			<set>
+				<value>abc@gmail.com</value>
+				<value>pqr@gmail.com</value>
+				<value>xyz@gmail.com</value>
+				<value>xyz@gmail.com</value>
+			</set>
+		</property>
+		<property name="courses">
+			<map>
+				<entry key="java" value="2 months" />
+				<entry key="Python" value="3 months" />
+			</map>
+		</property>
+		
+	</bean>
+	
+	
+
+</beans>
